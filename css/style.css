@@ -1,0 +1,177 @@
+*,*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{ 
+    font-family:'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: medium;
+}
+
+header.navbar-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    align-items: center;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgb(6, 91, 26);
+
+}
+
+header.navbar-container .navbar-list ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem 3rem;
+    list-style-type: none;
+}
+
+.navbar-list ul a {
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 999px;
+    color: white;
+}
+
+.navbar-list li:hover a {
+    color: black;
+}
+
+main{
+    display: flex;
+    padding: 20px;
+    padding-top: 80px;
+}
+
+.content {
+    flex: 6;
+    width: 65%;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 20px;
+}
+
+aside{
+    flex: 2;
+    width: 35%;
+    padding: 20px;
+}
+
+.profile {
+    padding: 20px;
+    border: 2px solid black;
+    box-shadow: 6px 6px 5px 1px #666666;
+}
+
+.profile header {
+    text-align: center;
+}
+
+th {
+    width: 100px;
+}
+
+.title {
+    text-align: center;
+     border: 2px solid green;
+    padding-block: 2px;
+    background-color:rgba(6, 91, 26, 0.8);
+    border-radius: 999px;
+    color: white;
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    padding-top: 80px;
+}
+
+.news-1,
+.news-2,
+.news-3,
+.news-4,
+.news-5 {
+    display: flex;
+    gap: 1rem 2rem;
+}
+
+.news-image {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.title-news {
+    border: 2px solid green;
+    background-color: rgba(6, 91, 26, 0.8);
+    color: white;
+    text-align: center;
+    border-radius: 999px;
+}
+
+.title-news h3 {
+    margin-block: 10px;
+    font-size: 20px;
+}
+
+.about-covid-19 h3 {
+    border: 2px solid green;
+    padding-block: 2px;
+    background-color:rgba(6, 91, 26, 0.8);
+    border-radius: 999px;
+    color: white;
+}
+
+.news-1 a,
+.news-2 a,
+.news-3 a,
+.news-4 a,
+.news-5 a {
+    text-decoration: none;
+    color: black;
+}
+
+.news-1 a:hover, 
+.news-2 a:hover, 
+.news-3 a:hover, 
+.news-4 a:hover, 
+.news-5 a:hover {
+    color: rgb(6, 91, 26);
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-list li {
+        margin-bottom: 10px;
+    }
+
+    .main,
+    aside {
+        flex: 1;
+    }
+}
+
+/* Responsive styles for smaller screens (phones) */
+@media screen and (max-width: 480px) {
+    .article-1,
+    aside {
+        flex: 1;
+        width: 100%;
+    }
+}
